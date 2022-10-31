@@ -1,13 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@400;600&display=swap');
 @font-face {
     font-family: NorseBold;
     src: url(Norse-Bold.otf)
 }
 
 :root {
+    --textclr: black;
     --dark: #596D48;
     --light: #E5E7EB;
     --light-shadow: #929394;
-    --yellow: #efdd53;
+    --fs-main: Barlow, sans-serif;
 }
 
 * {
@@ -59,9 +61,9 @@
 
   /* styling right side */
  .main-content {
-    color: #3f3f3f;
+    color:var(--textclr);
     background-color: #f4f6fa;
-    font-family: "Helvetica", "Arial", sans-serif;
+    font-family: var(--fs-main);
     font-weight: bold;
     font-size: 20px;
     width: 70vw;
@@ -80,7 +82,7 @@
     text-align: left;
     width: 80%;
     height: 35vh;
-    padding: 40px 0 0 60px;
+    padding: 40px 0 0 40px;
     
   }
   
@@ -90,8 +92,9 @@
     width: 99%;
     padding-left: 40px;
 
-    font-family:  "Helvetica", "Arial", sans-serif;
-    font-size: 12px;
+    font-family:  var(--fs-main);
+    font-size: 10px;
+    letter-spacing: .2rem;
 
     display: flex;
     flex-direction: row;
@@ -105,7 +108,7 @@
   }
 
   h1 {
-    margin: 0 60px;
+    margin: 0 40px;
     padding-bottom: 2rem;
     text-align: left;
     font-size: 18px;
@@ -161,7 +164,8 @@
   .form-row button {
     font-size: 16px;
     font-weight: bold;
-  
+    font-family: var(--fs-main);
+
     color: var(--light);
     background-color: var(--dark);
     box-shadow: 5px 10px 10px var(--light-shadow);
