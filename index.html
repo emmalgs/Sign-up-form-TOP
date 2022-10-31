@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+    <header></header>
     <div class="side-hero">
-        <header class="title">
+        <div class="title">
             <img src="image_files/odin-lined.png" alt="TOP logo" class="logo">
             BUCKETS & OPAL
-        </header>
+        </div>
     </div>
     <div class="main-content">
-        <header class='sign-up-header'>
+        <div class='sign-up-header'>
             <p>Sign up for our newsletter and receive <em>free</em> updates about Buckets and Opal, the most <em>precious</em> skinny pigs!</p>
-
             <p>Sign up <em>now!</em></p>
+        </div>
 
-        </header>
+        <h1>Let's do this!</h1> 
         
         <div class="form-content">
-            <h1>Let's Do This!</h1>
             <div class="form-row">
         <label for="first-name">First Name</label>
                 <input type="text" 
@@ -52,7 +52,7 @@
                 <label for="password">Password</label>
                 <input type="password" 
                     name="password" 
-                    id="password" required/>
+                    id="password" required />
             </div>
             <div class="form-row">
                 <label for="confirm-password">Confirm Password</label>
@@ -65,21 +65,6 @@
             <button>Create Account</button>
           </div>
     </div>  
+    <footer></footer>
 </body>
-
-<script>
-    const password = document.getElementById("password")
-    const confirm_password = document.getElementById("confirm_password");
-
-function validatePassword(){
-  if(password.value != confirm_password.value) {
-    confirm_password.setCustomValidity("Passwords Don't Match");
-  } else {
-    confirm_password.setCustomValidity('');
-  }
-}
-
-password.onchange = validatePassword;
-confirm_password.onkeyup = validatePassword;
-</script>
 </html>

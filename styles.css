@@ -6,6 +6,7 @@
 :root {
     --dark: #0253af;
     --light: #f8dae7;
+    --light-shadow: #a56882;
     --yellow: #efdd53;
 }
 
@@ -20,6 +21,7 @@
     flex-direction: row;
     align-items: flex-start;
     height: 100vh;
+    background-color: var(--light);
   }
   
   .side-hero {
@@ -27,6 +29,7 @@
     height: 100vh;
     background-size: cover;
     width: 30vw;
+    background-repeat: repeat;
   }
 
   .title {
@@ -39,7 +42,7 @@
     color: var(--yellow);
     font-family: NorseBold;
     font-weight: bold;
-    font-size: 3rem;
+    font-size: calc(30% + 2rem);
   }
 
   .logo {
@@ -55,8 +58,9 @@
     background-color: var(--light);
     font-family: "Helvetica", "Arial", sans-serif;
     font-weight: bold;
-    font-size: 18px;
+    font-size: 20px;
     width: 70vw;
+    padding-top: 50px;
 
     display: flex;
     flex-direction: column;
@@ -66,16 +70,15 @@
   .sign-up-header {
     text-align: left;
     width: 80%;
-    margin: 40px 0;
-    padding: 50px;
+    height: 35vh;
+    padding: 40px 0 10% 40px;
   }
   
   .form-content {
     background-color: var(--light);
-    box-shadow: 5px 10px var(--dark);
-    width: clamp(250px, 70%, 700px);
-    padding: 40px;
-    margin: 0 0 20px 0;
+    box-shadow: 5px 10px 10px var(--light-shadow);
+    width: 99%;
+    padding-left: 60px;
 
     font-family:  "Helvetica", "Arial", sans-serif;
     font-size: 12px;
@@ -84,11 +87,11 @@
     flex-direction: row;
     justify-content: flex-start;
     flex-wrap: wrap;
-    gap: 8px;
+    column-gap: 80px;
   }
 
   h1 {
-    margin: 0 20px;
+    margin: 0 60px;
     padding-bottom: 2rem;
     text-align: left;
     font-size: 18px;
@@ -97,7 +100,7 @@
 
   /* form styling */
   .form-row {
-    margin-bottom: 40px;
+    margin-bottom: 20px;
     display: flex;
     justify-content: flex-start;
     flex-direction: column;
@@ -113,13 +116,20 @@
     border-radius: 3px;
     width: 200px;
     padding: 7px;
-    font-size: 12px;
+    font-size: 16px;
   }
 
+  input:invalid {
+    background-color: var(--yellow);
+    border: none;
+    outline: 2px solid red;
+    border-radius: 5px;
+  }
   
   /* button styles */
   .form-row label {
-    margin-bottom: 15px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
   }
 
   .form-row button {
@@ -128,13 +138,14 @@
   
     color: var(--light);
     background-color: var(--dark);
+    box-shadow: 5px 10px 10px var(--light-shadow);
   
     border: none;
     border-radius: 3px;
   
     padding: 10px 40px;
     cursor: pointer;
-    margin: 40px;
+    margin: 60px;
   }
   
   .form-row button:hover {
