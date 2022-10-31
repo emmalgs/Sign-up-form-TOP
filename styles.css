@@ -4,9 +4,9 @@
 }
 
 :root {
-    --dark: #0253af;
-    --light: #f8dae7;
-    --light-shadow: #a56882;
+    --dark: #596D48;
+    --light: #E5E7EB;
+    --light-shadow: #929394;
     --yellow: #efdd53;
 }
 
@@ -28,34 +28,39 @@
     background-image: url(image_files/buckets.jpeg);
     height: 100vh;
     background-size: cover;
-    width: 30vw;
+    width: 35vw;
     background-repeat: repeat;
   }
 
-  .title {
-    background-color: var(--dark);
-    opacity: 0.7;
-    margin: 15vh 0 0 0;
-    padding: 0 50px;
+  .title-box {
+    background: rgba(41, 42, 53, 0.8);
+    margin-top: 21vh;
+    padding: 25px 40px 25px 25px;
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
 
+  .title {
     text-align: right;
-    color: var(--yellow);
+    color: white;
     font-family: NorseBold;
     font-weight: bold;
-    font-size: calc(30% + 2rem);
+    font-size: 5rem;
   }
 
   .logo {
-    height: 3rem;
+    height: 6rem;
     width: auto;
-    color: var(--yellow);
-    padding: 12px 0 0 12px;
+    padding: 0 8px 12px 8px;
   }
 
   /* styling right side */
  .main-content {
     color: #3f3f3f;
-    background-color: var(--light);
+    background-color: #f4f6fa;
     font-family: "Helvetica", "Arial", sans-serif;
     font-weight: bold;
     font-size: 20px;
@@ -67,18 +72,23 @@
     align-items: flex-start;
   }
   
+  p {
+    margin-bottom: 25px;
+  }
+
   .sign-up-header {
     text-align: left;
     width: 80%;
     height: 35vh;
-    padding: 40px 0 10% 40px;
+    padding: 40px 0 0 60px;
+    
   }
   
   .form-content {
     background-color: var(--light);
     box-shadow: 5px 10px 10px var(--light-shadow);
     width: 99%;
-    padding-left: 60px;
+    padding-left: 40px;
 
     font-family:  "Helvetica", "Arial", sans-serif;
     font-size: 12px;
@@ -89,13 +99,16 @@
     flex-wrap: wrap;
     column-gap: 80px;
   }
+  .form-wrapper {
+    background-color: var(--light);
+    padding-top: 20px;
+  }
 
   h1 {
     margin: 0 60px;
     padding-bottom: 2rem;
     text-align: left;
     font-size: 18px;
-    flex-grow: 6;
   }
 
   /* form styling */
@@ -125,7 +138,14 @@
     outline: 2px solid red;
     border-radius: 5px;
   }
-  
+
+  input:focus {
+    background-color: antiquewhite;
+    border: none;
+    outline: 1px solid teal;
+    transition: all 0.3s ease;
+  }
+
   /* button styles */
   .form-row label {
     margin-bottom: 8px;
@@ -145,7 +165,7 @@
   
     padding: 10px 40px;
     cursor: pointer;
-    margin: 60px;
+    margin: 40px;
   }
   
   .form-row button:hover {
@@ -156,6 +176,10 @@
     background-color: #407FC7;
   }
 
+  footer {
+    font-size: 12px;
+    padding: 0 0 40px 40px;
+  }
   /* 
   @media only screen and (min-width: 700px) {
     .form-row {
