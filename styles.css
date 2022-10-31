@@ -133,17 +133,23 @@
   }
 
   input:invalid {
-    background-color: var(--yellow);
     border: none;
     outline: 2px solid red;
     border-radius: 5px;
   }
 
+  input[type='email']:valid,
+  input[type='password']:valid {
+    border: none;
+    outline: 2px solid teal;
+    border-radius: 5px;
+  }
+
   input:focus {
-    background-color: antiquewhite;
     border: none;
     outline: 1px solid teal;
     transition: all 0.3s ease;
+    box-shadow: 5px 10px 10px var(--light-shadow);
   }
 
   /* button styles */
