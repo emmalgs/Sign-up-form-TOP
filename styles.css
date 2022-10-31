@@ -1,3 +1,14 @@
+@font-face {
+    font-family: NorseBold;
+    src: url(Norse-Bold.otf)
+}
+
+:root {
+    --dark: #0253af;
+    --light: #f8dae7;
+    --yellow: #efdd53;
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -8,34 +19,54 @@
     display: flex;
     flex-direction: row;
     align-items: flex-start;
+    height: 100vh;
   }
   
   .side-hero {
-    background-image: url(image_files/Broccoli\ Beach\ copy\ 2.JPG);
-    height: 200vh;
+    grid-area: hero;
+    background-image: url(image_files/buckets.jpeg);
+    height: 100vh;
     background-size: cover;
+    width: 30vw;
+  }
 
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+  .title {
+    background-color: var(--dark);
+    opacity: 0.5;
+    margin: 15vh 0 0 0;
+    padding: 0 50px;
+
+    text-align: right;
+    color: var(--yellow);
+    font-family: NorseBold;
+    font-weight: bold;
+    font-size: 3rem;
+  }
+
+  .logo {
+    height: 3rem;
+    width: auto;
+    color: var(--yellow);
+    padding: 12px 0 0 12px;
   }
 
   /* styling right side */
  .main-content {
     color: #3f3f3f;
-    background-color: #f8dae7;
+    background-color: var(--light);
     font-family: "Helvetica", "Arial", sans-serif;
     font-weight: bold;
-    font-size: 22px;
-  
+    font-size: 18px;
+    width: 70vw;
+
     display: flex;
     flex-direction: column;
     align-items: center;
   }
   
   .sign-up-header {
-    text-align: center;
-    background-color: #efdd53;
+    text-align: left;
+    background-color: var(--yellow);
     border: 1px solid #cef84f;
     border-radius: 3px;
     
@@ -45,7 +76,7 @@
   }
   
   .form-content {
-    background-color: #efdd53;
+    background-color: var(--yellow);
     border: 1px solid #cef84f;
     border-radius: 3px;
     
@@ -84,8 +115,8 @@
     font-size: 16px;
     font-weight: bold;
   
-    color: #f8dae7;
-    background-color: #0253af;
+    color: var(--light);
+    background-color: var(--dark);
   
     border: none;
     border-radius: 3px;
@@ -104,17 +135,16 @@
 
 
   @media only screen and (min-width: 700px) {
-    .main-content,
-    .side-hero {
-      width: 100vw;
-    }
     .form-row {
       flex-direction: row;
       align-items: flex-start; /* To avoid stretching */
       margin-bottom: 20px;
     }
-    .form-row input[type='text'] {
-      width: 250px;
+    .form-row input[type='text'],
+    .form-row input[type='email'],
+    .form-row input[type='tel'],
+    .form-row input[type='password'] {
+      width: 180px;
       height: initial;
     }
     .form-row label {
