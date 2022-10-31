@@ -1,4 +1,126 @@
-.form-test {
-    background-color: orange;
-    border: 1px solid turquoise;
-}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+  
+  .side-hero {
+    background-image: url(image_files/Broccoli\ Beach\ copy\ 2.JPG);
+    height: 200vh;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  /* styling right side */
+ .main-content {
+    color: #3f3f3f;
+    background-color: #f8dae7;
+    font-family: "Helvetica", "Arial", sans-serif;
+    font-weight: bold;
+    font-size: 22px;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .sign-up-header {
+    text-align: center;
+    background-color: #efdd53;
+    border: 1px solid #cef84f;
+    border-radius: 3px;
+    
+    width: 80%;
+    margin: 40px 0;
+    padding: 50px;
+  }
+  
+  .form-content {
+    background-color: #efdd53;
+    border: 1px solid #cef84f;
+    border-radius: 3px;
+    
+    width: 80%;
+    padding: 50px;
+    margin: 0 0 40px 0;
+  }
+
+  /* form styling */
+  .form-row {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    flex-wrap: wrap;
+  }
+  
+  .form-row input[type='text'],
+  .form-row input[type='email'],
+  .form-row input[type='password'],
+  .form-row input[type='tel'] {
+    background-color: #FFFFFF;
+    border: 1px solid #D6D9DC;
+    border-radius: 3px;
+    width: 100%;
+    padding: 7px;
+    font-size: 14px;
+  }
+  
+  /* button styles */
+  .form-row label {
+    margin-bottom: 15px;
+  }
+
+  .form-row button {
+    font-size: 16px;
+    font-weight: bold;
+  
+    color: #f8dae7;
+    background-color: #0253af;
+  
+    border: none;
+    border-radius: 3px;
+  
+    padding: 10px 40px;
+    cursor: pointer;
+  }
+  
+  .form-row button:hover {
+    background-color: #76AEED;
+  }
+  
+  .form-row button:active {
+    background-color: #407FC7;
+  }
+
+
+  @media only screen and (min-width: 700px) {
+    .main-content,
+    .side-hero {
+      width: 100vw;
+    }
+    .form-row {
+      flex-direction: row;
+      align-items: flex-start; /* To avoid stretching */
+      margin-bottom: 20px;
+    }
+    .form-row input[type='text'] {
+      width: 250px;
+      height: initial;
+    }
+    .form-row label {
+      text-align: right;
+      width: 120px;
+      margin-top: 7px;
+      padding-right: 20px;
+    }
+  }
